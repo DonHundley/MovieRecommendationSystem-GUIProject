@@ -1,106 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.mfxcomponents.controls.buttons.MFXElevatedButton?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #1D465F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.view.MovieRecommendationMainView">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox layoutX="14.0" layoutY="378.0" prefHeight="150.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+      <VBox prefHeight="720.0" prefWidth="880.0" style="-fx-background-color: #1D465F;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin>
-               <image>
-                  <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../resources/biglebowski.jpg" />
-               </image>
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin></ImageView>
-            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="230.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin>
-               <image>
-                  <Image url="@../../../../resources/spaceballs.jpg" />
-               </image></ImageView>
-            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="430.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../resources/matrix.jpg" />
-               </image>
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin></ImageView>
-            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="630.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
-               </image></ImageView>
-         </children>
-      </HBox>
-      <FlowPane layoutX="556.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <AnchorPane prefHeight="50.0" prefWidth="1280.0" style="-fx-background-color: #FFB35C;" />
-            <AnchorPane style="-fx-background-color: black;">
+            <HBox minHeight="-Infinity" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFB35C;" />
+            <AnchorPane prefHeight="300.0" prefWidth="880.0" style="-fx-background-color: black;" />
+            <Label text="Category" textFill="#ffb35c">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="110.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0">
                <children>
-                  <MediaView fitHeight="300.0" fitWidth="600.0" />
+                  <MFXElevatedButton>
+                     <HBox.margin>
+                        <Insets top="55.0" />
+                     </HBox.margin>
+                  </MFXElevatedButton>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/biglebowski.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/matrix.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/spaceballs.jpg" />
+                     </image>
+                  </ImageView>
                </children>
-               <padding>
-                  <Insets left="150.0" right="150.0" />
-               </padding>
-            </AnchorPane>
-            <AnchorPane prefHeight="300.0" prefWidth="380.0" style="-fx-background-color: #2274A5;" />
+            </HBox>
+            <Label text="Category" textFill="#ffb35c">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="110.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+               <children>
+                  <MFXElevatedButton>
+                     <HBox.margin>
+                        <Insets top="55.0" />
+                     </HBox.margin>
+                  </MFXElevatedButton>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/biglebowski.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/matrix.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/spaceballs.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
          </children>
-      </FlowPane>
-      <HBox layoutX="100.0" layoutY="570.0" prefHeight="150.0">
+      </VBox>
+      <VBox prefHeight="720.0" prefWidth="400.0" style="-fx-background-color: #1D465F;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin>
-               <image>
-                  <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../resources/biglebowski.jpg" />
-               </image>
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="230.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin>
-               <image>
-                  <Image url="@../../../../resources/spaceballs.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="430.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../resources/matrix.jpg" />
-               </image>
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="630.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
-               </image>
-            </ImageView>
+            <HBox minHeight="-Infinity" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFB35C;" />
+            <AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #2274A5;" />
+            <MFXElevatedButton>
+               <VBox.margin>
+                  <Insets top="83.0" />
+               </VBox.margin>
+            </MFXElevatedButton>
+            <MFXElevatedButton>
+               <VBox.margin>
+                  <Insets top="138.0" />
+               </VBox.margin>
+            </MFXElevatedButton>
          </children>
-      </HBox>
+      </VBox>
    </children>
-</AnchorPane>
+</HBox>
