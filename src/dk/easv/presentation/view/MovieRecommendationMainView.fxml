@@ -9,79 +9,65 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="720.0" prefWidth="800.0" style="-fx-background-color: #1D465F;">
          <children>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #FFB35C;" />
-            <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0">
-              <items>
-                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: black;" />
-                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #2274A5;" />
-              </items>
+            <SplitPane prefHeight="160.0" prefWidth="200.0">
+               <items>
+                  <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: #1D465F;">
+                     <children>
+                        <AnchorPane minWidth="-Infinity" prefHeight="300.0" prefWidth="100.0" style="-fx-background-color: black;" />
+                        <AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="388.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../resources/Hydrangeas.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" minWidth="-Infinity" prefHeight="300.0" prefWidth="100.0" style="-fx-background-color: black;" />
+                        <AnchorPane minWidth="-Infinity" prefHeight="300.0" prefWidth="175.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="247.0" prefWidth="150.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tortor est. Donec lacinia hendrerit ipsum quis lobortis. Maecenas pharetra iaculis lacus in accumsan. Aliquam lacinia ultrices neque. Quisque nec lectus euismod, pulvinar quam ac, pharetra nisl.  " textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="62.0" layoutY="261.0" mnemonicParsing="false" text="Button" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </items>
             </SplitPane>
-            <Label text="Category" textFill="#ffb35c">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="110.0" top="5.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+            <HBox prefHeight="15.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" text="Button">
+                  <Label text="Category" textFill="#ffb35c">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                      <HBox.margin>
-                        <Insets top="55.0" />
+                        <Insets left="100.0" right="20.0" top="15.0" />
                      </HBox.margin>
-                  </Button>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../resources/biglebowski.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../resources/matrix.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../resources/spaceballs.jpg" />
-                     </image>
-                  </ImageView>
-                  <Button mnemonicParsing="false" text="Button">
+                  </Label>
+                  <Line endX="505.29290771484375" endY="-0.20710676908493042" startX="-100.0" stroke="#ffb35c">
                      <HBox.margin>
-                        <Insets top="55.0" />
+                        <Insets top="30.0" />
                      </HBox.margin>
-                  </Button>
+                  </Line>
                </children>
             </HBox>
-            <Label text="Category" textFill="#ffb35c">
-               <VBox.margin>
-                  <Insets bottom="5.0" left="110.0" top="5.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0">
                <children>
                   <Button mnemonicParsing="false" text="Button">
                      <HBox.margin>
-                        <Insets top="55.0" />
+                        <Insets left="20.0" top="55.0" />
                      </HBox.margin>
                   </Button>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
@@ -115,6 +101,68 @@
                      </HBox.margin>
                   </Button>
                </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="15.0" prefWidth="200.0">
+               <children>
+                  <Label text="Category" textFill="#ffb35c">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Line endX="505.29290771484375" endY="-0.20710676908493042" startX="-100.0" stroke="#ffb35c">
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </Line>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Button">
+                     <HBox.margin>
+                        <Insets left="20.0" top="55.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/biglebowski.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/matrix.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/spaceballs.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" text="Button">
+                     <HBox.margin>
+                        <Insets top="55.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
             </HBox>
          </children>
       </VBox>
