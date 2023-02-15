@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
-   <center>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="454.0">
+<BorderPane id="borderpane" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
+   <bottom>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="454.0" BorderPane.alignment="CENTER">
          <children>
             <GridPane layoutX="104.0" layoutY="49.0" prefHeight="110.0" prefWidth="245.0">
                <columnConstraints>
@@ -22,7 +22,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <PasswordField disable="true" fx:id="passwordField" GridPane.rowIndex="1" />
+                  <PasswordField fx:id="passwordField" disable="true" GridPane.rowIndex="1" />
                   <TextField fx:id="userId" text="Georgi Facello" />
                </children>
             </GridPane>
@@ -35,11 +35,11 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onAction="#logIn" text="log - in" />
-                  <Button mnemonicParsing="false" onAction="#signUp" text="Sig - Up" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#signUp" prefHeight="25.0" prefWidth="66.0" styleClass="loginWindowButtons" text="Sign - Up" GridPane.columnIndex="1" />
                </children>
             </GridPane>
+            <Button layoutX="104.0" layoutY="162.0" mnemonicParsing="false" onAction="#logIn" prefHeight="25.0" prefWidth="66.4" styleClass="loginWindowButtons" text="Log - in" />
          </children>
       </AnchorPane>
-   </center>
+   </bottom>
 </BorderPane>

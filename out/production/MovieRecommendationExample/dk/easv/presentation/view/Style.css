@@ -1,0 +1,16 @@
+
+#borderpane {
+    -fx-background-color: #1D465F;
+}
+
+.loginWindowButtons {
+
+    -fx-background-color: #FFB35C;
+
+    fx-font-size: 11pt;
+    -fx-font-family: sans-serif;
+}
+
+.loginWindowButtons:hover {
+  -fx-opacity: 0.5;
+}
