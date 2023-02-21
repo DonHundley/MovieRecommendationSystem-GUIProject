@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -9,156 +10,190 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fillHeight="false" minHeight="800.0" minWidth="800.0" style="-fx-background-color: #1D465F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
-      <VBox prefHeight="720.0" prefWidth="800.0" style="-fx-background-color: #1D465F;">
+      <VBox alignment="CENTER" minWidth="800.0" style="-fx-background-color: #1D465F;" HBox.hgrow="ALWAYS">
          <children>
-            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #FFB35C;" />
-            <SplitPane prefHeight="160.0" prefWidth="200.0">
+            <HBox minHeight="50.0" minWidth="800.0" style="-fx-background-color: ffb35c;" VBox.vgrow="ALWAYS" />
+            <SplitPane dividerPositions="0.7701005025125628" minWidth="800.0" style="-fx-background-color: #FFB35C;" VBox.vgrow="ALWAYS">
                <items>
-                  <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: #1D465F;">
+                  <AnchorPane style="-fx-background-color: black;">
                      <children>
-                        <AnchorPane minWidth="-Infinity" prefHeight="300.0" prefWidth="100.0" style="-fx-background-color: black;" />
-                        <AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;">
-                           <children>
-                              <ImageView fitHeight="300.0" fitWidth="388.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../../resources/Hydrangeas.jpg" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="10.0" layoutY="10.0" minWidth="-Infinity" prefHeight="300.0" prefWidth="100.0" style="-fx-background-color: black;" />
-                        <AnchorPane minWidth="-Infinity" prefHeight="300.0" prefWidth="175.0">
-                           <children>
-                              <Label layoutX="14.0" layoutY="14.0" prefHeight="247.0" prefWidth="150.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tortor est. Donec lacinia hendrerit ipsum quis lobortis. Maecenas pharetra iaculis lacus in accumsan. Aliquam lacinia ultrices neque. Quisque nec lectus euismod, pulvinar quam ac, pharetra nisl.  " textFill="WHITE" wrapText="true">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Button layoutX="62.0" layoutY="261.0" mnemonicParsing="false" text="Button" />
-                           </children>
-                        </AnchorPane>
+                        <MediaView fx:id="mediaViewWindow" fitHeight="250.0" fitWidth="400.0" layoutX="106.0" layoutY="19.0" AnchorPane.bottomAnchor="18.0" AnchorPane.topAnchor="19.0" />
+                        <MFXButton fx:id="playButton" buttonType="RAISED" depthLevel="LEVEL5" layoutX="279.0" layoutY="119.0" onAction="#playMedia" prefHeight="50.0" prefWidth="55.0" rippleBackgroundOpacity="1.0" rippleColor="#2f80ae" styleClass="loginWindowButtons" stylesheets="@Style.css" text="Play" />
                      </children>
-                  </HBox>
+                  </AnchorPane>
+                  <AnchorPane style="-fx-background-color: #1D465F;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefWidth="150.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tortor est. Donec lacinia hendrerit ipsum quis lobortis. Maecenas pharetra iaculis lacus in accumsan. Aliquam lacinia ultrices neque. Quisque nec lectus euismod, pulvinar quam ac, pharetra nisl.  " textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="50.0" layoutY="264.0" mnemonicParsing="false" styleClass="loginWindowButtons" stylesheets="@Style.css" text="Watch Now" />
+                     </children>
+                  </AnchorPane>
                </items>
             </SplitPane>
-            <HBox prefHeight="15.0" prefWidth="200.0">
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
                <children>
-                  <Label text="Category" textFill="#ffb35c">
+                  <Label text="Your highest rated" textFill="#ffb35c" HBox.hgrow="ALWAYS">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="100.0" right="20.0" top="15.0" />
+                        <Insets right="20.0" top="15.0" />
                      </HBox.margin>
                   </Label>
-                  <Line endX="505.29290771484375" endY="-0.20710676908493042" startX="-100.0" stroke="#ffb35c">
+                  <Line endX="400.0" endY="-4.3451786041259766E-5" startX="-100.0" stroke="#ffb35c" HBox.hgrow="ALWAYS">
                      <HBox.margin>
-                        <Insets top="30.0" />
+                        <Insets top="15.0" />
                      </HBox.margin>
                   </Line>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+            <HBox fx:id="userHighestRatedHbox" alignment="CENTER" focusTraversable="true" VBox.vgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" text="Button">
+                  <ImageView fx:id="categoryOneBackButton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" rotate="315.0" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../../../resources/icons8-parasol-48.png" />
+                     </image>
                      <HBox.margin>
-                        <Insets left="20.0" top="55.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
-                  </Button>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  </ImageView>
+                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/biglebowski.jpg" />
                      </image>
+                     <HBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
                      </image>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/matrix.jpg" />
                      </image>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
                      </image>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/spaceballs.jpg" />
                      </image>
-                  </ImageView>
-                  <Button mnemonicParsing="false" text="Button">
                      <HBox.margin>
-                        <Insets top="55.0" />
+                        <Insets right="25.0" />
                      </HBox.margin>
-                  </Button>
+                  </ImageView>
+                  <ImageView fx:id="categoryOneForwardButton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" rotate="135.0" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../../../resources/icons8-parasol-48.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
                </children>
                <padding>
                   <Insets top="20.0" />
                </padding>
             </HBox>
-            <HBox prefHeight="15.0" prefWidth="200.0">
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
                <children>
-                  <Label text="Category" textFill="#ffb35c">
+                  <Label text="Suggested for you" textFill="#ffb35c" HBox.hgrow="ALWAYS">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="100.0" right="20.0" top="15.0" />
+                        <Insets right="20.0" top="15.0" />
                      </HBox.margin>
                   </Label>
-                  <Line endX="505.29290771484375" endY="-0.20710676908493042" startX="-100.0" stroke="#ffb35c">
+                  <Line endX="400.0" endY="0.20707780122756958" startX="-100.0" stroke="#ffb35c" HBox.hgrow="ALWAYS">
                      <HBox.margin>
-                        <Insets top="30.0" />
+                        <Insets top="15.0" />
                      </HBox.margin>
                   </Line>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+            <HBox fx:id="userSuggestedHbox" alignment="CENTER" focusTraversable="true" VBox.vgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" text="Button">
+                  <ImageView fx:id="categoryTwoBackButton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" rotate="315.0" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../../../resources/icons8-parasol-48.png" />
+                     </image>
                      <HBox.margin>
-                        <Insets left="20.0" top="55.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
-                  </Button>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  </ImageView>
+                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/biglebowski.jpg" />
                      </image>
+                     <HBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
                      </image>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="100.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/matrix.jpg" />
                      </image>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="100.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
                      </image>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="100.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/spaceballs.jpg" />
                      </image>
-                  </ImageView>
-                  <Button mnemonicParsing="false" text="Button">
                      <HBox.margin>
-                        <Insets top="55.0" />
+                        <Insets right="25.0" />
                      </HBox.margin>
-                  </Button>
+                  </ImageView>
+                  <ImageView fx:id="categoryTwoForwardButtton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" rotate="135.0" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../../../resources/icons8-parasol-48.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
                </children>
                <VBox.margin>
                   <Insets bottom="20.0" top="20.0" />
