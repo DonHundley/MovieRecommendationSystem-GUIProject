@@ -14,11 +14,11 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<HBox fillHeight="false" minHeight="800.0" minWidth="800.0" style="-fx-background-color: #1D465F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<HBox fillHeight="false" minHeight="800.0" minWidth="800.0" style="-fx-background-color: #1D465F;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
       <VBox alignment="CENTER" minWidth="800.0" style="-fx-background-color: #1D465F;" HBox.hgrow="ALWAYS">
          <children>
-            <HBox minHeight="50.0" minWidth="800.0" style="-fx-background-color: ffb35c;" VBox.vgrow="ALWAYS" />
+            <HBox minHeight="50.0" minWidth="800.0" style="-fx-background-color: ffb35c;" stylesheets="@Style.css" VBox.vgrow="ALWAYS" />
             <SplitPane dividerPositions="0.7701005025125628" minWidth="800.0" style="-fx-background-color: #FFB35C;" VBox.vgrow="ALWAYS">
                <items>
                   <AnchorPane style="-fx-background-color: black;">
@@ -29,7 +29,7 @@
                   </AnchorPane>
                   <AnchorPane style="-fx-background-color: #1D465F;">
                      <children>
-                        <Label layoutX="14.0" layoutY="14.0" prefWidth="150.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tortor est. Donec lacinia hendrerit ipsum quis lobortis. Maecenas pharetra iaculis lacus in accumsan. Aliquam lacinia ultrices neque. Quisque nec lectus euismod, pulvinar quam ac, pharetra nisl.  " textFill="WHITE" wrapText="true">
+                        <Label layoutX="14.0" layoutY="14.0" prefWidth="150.0" stylesheets="@Style.css" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tortor est. Donec lacinia hendrerit ipsum quis lobortis. Maecenas pharetra iaculis lacus in accumsan. Aliquam lacinia ultrices neque. Quisque nec lectus euismod, pulvinar quam ac, pharetra nisl.  " textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -41,7 +41,7 @@
             </SplitPane>
             <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
                <children>
-                  <Label text="Your highest rated" textFill="#ffb35c" HBox.hgrow="ALWAYS">
+                  <Label stylesheets="@Style.css" text="Your highest rated" textFill="#ffb35c" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -121,7 +121,7 @@
             </HBox>
             <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
                <children>
-                  <Label text="Suggested for you" textFill="#ffb35c" HBox.hgrow="ALWAYS">
+                  <Label stylesheets="@Style.css" text="Suggested for you" textFill="#ffb35c" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
