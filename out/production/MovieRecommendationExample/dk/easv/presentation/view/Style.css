@@ -1,4 +1,6 @@
-
+*{
+    -fx-font-family: 'Roboto', sans-serif;
+}
 #borderpane {
     -fx-background-color: #1D465F;
 }

@@ -14,11 +14,60 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<HBox fillHeight="false" minHeight="800.0" minWidth="800.0" style="-fx-background-color: #1D465F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<HBox fillHeight="false" minHeight="800.0" minWidth="800.0" style="-fx-background-color: #1D465F;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
       <VBox alignment="CENTER" minWidth="800.0" style="-fx-background-color: #1D465F;" HBox.hgrow="ALWAYS">
          <children>
-            <HBox minHeight="50.0" minWidth="800.0" style="-fx-background-color: ffb35c;" stylesheets="@Style.css" VBox.vgrow="ALWAYS" />
+            <HBox minHeight="50.0" minWidth="800.0" style="-fx-background-color: ffb35c;" stylesheets="@Style.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/2138269_ball_beach_beach_ball_fun_holidays_icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="BeachApp">
+                     <HBox.margin>
+                        <Insets left="20.0" top="17.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="My Movies">
+                     <HBox.margin>
+                        <Insets left="170.0" top="17.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto Black" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="TV Shows">
+                     <HBox.margin>
+                        <Insets left="20.0" top="17.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Most Watched">
+                     <HBox.margin>
+                        <Insets left="20.0" top="17.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Georgi">
+                     <HBox.margin>
+                        <Insets left="160.0" top="17.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/login-icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children></HBox>
             <SplitPane dividerPositions="0.7701005025125628" minWidth="800.0" style="-fx-background-color: #FFB35C;" VBox.vgrow="ALWAYS">
                <items>
                   <AnchorPane style="-fx-background-color: black;">
