@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -37,6 +38,7 @@ public class LogInController implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System 0.01 Beta");
+            stage.getIcons().add(new Image("resources/beach_ball.png"));
             stage.show();
             AppController controller = loader.getController();
 
