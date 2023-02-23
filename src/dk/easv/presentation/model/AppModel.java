@@ -7,6 +7,8 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.*;
+
 public class AppModel {
 
     LogicManager logic = new LogicManager();
@@ -16,6 +18,7 @@ public class AppModel {
     private final ObservableList<Movie> obsTopMovieNotSeen = FXCollections.observableArrayList();
     private final ObservableList<UserSimilarity>  obsSimilarUsers = FXCollections.observableArrayList();
     private final ObservableList<TopMovie> obsTopMoviesSimilarUsers = FXCollections.observableArrayList();
+
 
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
@@ -78,4 +81,17 @@ public class AppModel {
         else
             return true;
     }
+
+    public String randMovieTitle(){
+        for (int i = 0; i < obsTopMovieSeen.size(); i++){
+            int index = (int)(Math.random() * obsTopMovieSeen.size());
+            return obsTopMovieSeen.get(index).getTitle();
+        }
+        return null;
+    }
+
+    public String randMoviePosterPath(){
+        return logic.randMoviePoster();
+    }
+
 }

@@ -2,11 +2,13 @@ package dk.easv.presentation.controller;
 
 import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
+import javafx.collections.*;
 import javafx.event.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
+import javafx.scene.input.*;
 import javafx.scene.media.*;
 import javafx.util.*;
 
@@ -15,7 +17,18 @@ import java.net.URL;
 import java.util.*;
 
 public class AppController implements Initializable {
-
+    public ImageView categoryOneMovieOne;
+    public ImageView categoryOneMovieTwo;
+    public ImageView categoryOneMovieThree;
+    public ImageView categoryOneMovieFour;
+    public ImageView categoryOneMovieFive;
+    public ImageView categoryTwoMovieOne;
+    public ImageView categoryTwoMovieTwo;
+    public ImageView categoryTwoMovieThree;
+    public ImageView categoryTwoMovieFour;
+    public ImageView categoryTwoMovieFive;
+    @FXML
+    private Label movieTitleLabel;
     @FXML
     private Button playButton;
 
@@ -56,10 +69,12 @@ public class AppController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         File trailer = new File("src/resources/vecteezy-trailer-ex.mp4");
         media = new Media(trailer.toURI().toString());
         mediaPlayer = new MediaPlayer(media);
         mediaViewWindow.setMediaPlayer(mediaPlayer);
+
     }
 
     public void setModel(AppModel model) {
@@ -70,10 +85,15 @@ public class AppController implements Initializable {
         //lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
         //lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
 
-        startTimer("Load users");
-        model.loadUsers();
+        startTimer("Load user data");
+        model.loadData(model.getObsLoggedInUser());
         stopTimer();
 
+        startTimer("Randomizing posters");
+        movieTitleLabel.setText(model.randMovieTitle());
+        setCategoryOnePosters();
+        setCategoryTwoPosters();
+        stopTimer();
         //lvUsers.getSelectionModel().selectedItemProperty().addListener(
         //        (observableValue, oldUser, selectedUser) -> {
         //            startTimer("Loading all data for user: " + selectedUser);
@@ -117,5 +137,33 @@ public class AppController implements Initializable {
             }
         };
         playTimer.scheduleAtFixedRate(task, 0, 1000);
+    }
+
+    private void setCategoryOnePosters(){
+        categoryOneMovieOne.setImage(new Image(model.randMoviePosterPath()));
+        categoryOneMovieTwo.setImage(new Image(model.randMoviePosterPath()));
+        categoryOneMovieThree.setImage(new Image(model.randMoviePosterPath()));
+        categoryOneMovieFour.setImage(new Image(model.randMoviePosterPath()));
+        categoryOneMovieFive.setImage(new Image(model.randMoviePosterPath()));
+    }
+
+    private void setCategoryTwoPosters(){
+        categoryTwoMovieOne.setImage(new Image(model.randMoviePosterPath()));
+        categoryTwoMovieTwo.setImage(new Image(model.randMoviePosterPath()));
+        categoryTwoMovieThree.setImage(new Image(model.randMoviePosterPath()));
+        categoryTwoMovieFour.setImage(new Image(model.randMoviePosterPath()));
+        categoryTwoMovieFive.setImage(new Image(model.randMoviePosterPath()));
+    }
+
+    public void getMovieInfo(MouseEvent mouseEvent) {
+        movieTitleLabel.setText(model.randMovieTitle());
+    }
+
+    public void shiftMovies(MouseEvent mouseEvent) {
+        setCategoryOnePosters();
+    }
+
+    public void catTwoShiftMovies(MouseEvent mouseEvent) {
+        setCategoryTwoPosters();
     }
 }

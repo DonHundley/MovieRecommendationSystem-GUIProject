@@ -4,18 +4,22 @@ import dk.easv.entities.Movie;
 import dk.easv.entities.Rating;
 import dk.easv.entities.User;
 
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DataAccessManager {
     private HashMap<Integer, User> users = new HashMap<>();
     private HashMap<Integer, Movie> movies = new HashMap<>();
     private List<Rating> ratings = new ArrayList<>();
+
+
+
+    private List<String> moviePosters = new ArrayList<>();
+
+    private String postersDirectory = "src/resources/posters";
+
 
     // Loads all data from disk and stores in memory
     // For performance, data is only updated if updateCacheFromDisk() is called
@@ -34,11 +38,30 @@ public class DataAccessManager {
     public List<Rating> getAllRatings(){
         return ratings;
     }
-
+    public List<String> getMoviePosters() {return moviePosters;}
 
     public void updateCacheFromDisk(){
         loadAllRatings();
+        loadAllPosters();
     }
+
+    private void loadAllPosters() {
+        File dir = new File(postersDirectory);
+
+        Collection<String> posters =new ArrayList<String>();
+
+        if(dir.isDirectory()){
+            File[] listFiles = dir.listFiles();
+
+            for(File file : listFiles){
+                if(file.isFile()) {
+                    posters.add(file.getAbsolutePath());
+                }
+            }
+        }
+        moviePosters.addAll(posters);
+    }
+
 
     private void loadAllMovies() {
         try {

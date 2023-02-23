@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<HBox fillHeight="false" minHeight="800.0" minWidth="800.0" style="-fx-background-color: #1D465F;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<HBox fillHeight="false" style="-fx-background-color: #1D465F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
       <VBox alignment="CENTER" minWidth="800.0" style="-fx-background-color: #1D465F;" HBox.hgrow="ALWAYS">
          <children>
@@ -78,12 +78,17 @@
                   </AnchorPane>
                   <AnchorPane style="-fx-background-color: #1D465F;">
                      <children>
-                        <Label layoutX="14.0" layoutY="14.0" prefWidth="150.0" stylesheets="@Style.css" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tortor est. Donec lacinia hendrerit ipsum quis lobortis. Maecenas pharetra iaculis lacus in accumsan. Aliquam lacinia ultrices neque. Quisque nec lectus euismod, pulvinar quam ac, pharetra nisl.  " textFill="WHITE" wrapText="true">
+                        <Label layoutX="4.0" layoutY="38.0" prefHeight="204.0" prefWidth="300.0" stylesheets="@Style.css" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tortor est. Donec lacinia hendrerit ipsum quis lobortis. Maecenas pharetra iaculis lacus in accumsan. Aliquam lacinia ultrices neque. Quisque nec lectus euismod, pulvinar quam ac, pharetra nisl.  " textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="45.0">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Button layoutX="50.0" layoutY="264.0" mnemonicParsing="false" styleClass="loginWindowButtons" stylesheets="@Style.css" text="Watch Now" AnchorPane.bottomAnchor="5.0" />
+                        <Button layoutX="54.0" layoutY="257.0" mnemonicParsing="false" styleClass="loginWindowButtons" stylesheets="@Style.css" text="Watch Now" AnchorPane.bottomAnchor="14.0" />
+                        <Label fx:id="movieTitleLabel" alignment="CENTER" layoutX="3.0" layoutY="3.0" prefHeight="45.0" stylesheets="@Style.css" text="Movie Title" textFill="#ffb35c" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </items>
@@ -107,7 +112,7 @@
             </HBox>
             <HBox fx:id="userHighestRatedHbox" alignment="CENTER" focusTraversable="true" VBox.vgrow="ALWAYS">
                <children>
-                  <ImageView fx:id="categoryOneBackButton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" rotate="315.0" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryOneBackButton" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" onMouseClicked="#shiftMovies" pickOnBounds="true" preserveRatio="true" rotate="315.0" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/icons8-parasol-48.png" />
                      </image>
@@ -115,47 +120,47 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryOneMovieOne" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/biglebowski.jpg" />
+                        <Image url="@../../../../resources/posters/biglebowski.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets left="25.0" right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryOneMovieTwo" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
+                        <Image url="@../../../../resources/posters/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryOneMovieThree" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/matrix.jpg" />
+                        <Image url="@../../../../resources/posters/matrix.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryOneMovieFour" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
+                        <Image url="@../../../../resources/posters/pulp-fiction-cover-i1288.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryOneMovieFive" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/spaceballs.jpg" />
+                        <Image url="@../../../../resources/posters/spaceballs.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fx:id="categoryOneForwardButton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" rotate="135.0" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryOneForwardButton" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" onMouseClicked="#shiftMovies" pickOnBounds="true" preserveRatio="true" rotate="135.0" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/icons8-parasol-48.png" />
                      </image>
@@ -164,9 +169,9 @@
                      </HBox.margin>
                   </ImageView>
                </children>
-               <padding>
+               <VBox.margin>
                   <Insets top="20.0" />
-               </padding>
+               </VBox.margin>
             </HBox>
             <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
                <children>
@@ -187,7 +192,7 @@
             </HBox>
             <HBox fx:id="userSuggestedHbox" alignment="CENTER" focusTraversable="true" VBox.vgrow="ALWAYS">
                <children>
-                  <ImageView fx:id="categoryTwoBackButton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" rotate="315.0" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryTwoBackButton" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" onMouseClicked="#catTwoShiftMovies" pickOnBounds="true" preserveRatio="true" rotate="315.0" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/icons8-parasol-48.png" />
                      </image>
@@ -195,47 +200,47 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryTwoMovieOne" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/biglebowski.jpg" />
+                        <Image url="@../../../../resources/posters/biglebowski.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets left="25.0" right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryTwoMovieTwo" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
+                        <Image url="@../../../../resources/posters/fear-and-loathing-in-las-vegas-movie-poster-md.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="100.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryTwoMovieThree" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/matrix.jpg" />
+                        <Image url="@../../../../resources/posters/matrix.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="100.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryTwoMovieFour" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/pulp-fiction-cover-i1288.jpg" />
+                        <Image url="@../../../../resources/posters/pulp-fiction-cover-i1288.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="100.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryTwoMovieFive" fitHeight="150.0" fitWidth="110.0" focusTraversable="true" onMouseClicked="#getMovieInfo" pickOnBounds="true" HBox.hgrow="ALWAYS">
                      <image>
-                        <Image url="@../../../../resources/spaceballs.jpg" />
+                        <Image url="@../../../../resources/posters/spaceballs.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fx:id="categoryTwoForwardButtton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" rotate="135.0" HBox.hgrow="ALWAYS">
+                  <ImageView fx:id="categoryTwoForwardButton" fitHeight="24.0" fitWidth="24.0" focusTraversable="true" onMouseClicked="#catTwoShiftMovies" pickOnBounds="true" preserveRatio="true" rotate="135.0" HBox.hgrow="ALWAYS">
                      <image>
                         <Image url="@../../../../resources/icons8-parasol-48.png" />
                      </image>

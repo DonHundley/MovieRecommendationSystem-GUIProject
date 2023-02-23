@@ -2,11 +2,15 @@ package dk.easv.logic;
 
 import dk.easv.dataaccess.DataAccessManager;
 import dk.easv.entities.*;
+
+import java.io.*;
 import java.util.*;
 
 public class LogicManager {
 
     DataAccessManager dataMgr = new DataAccessManager();
+
+
 
     public void reloadAllDataFromStorage(){
         dataMgr.updateCacheFromDisk();
@@ -14,6 +18,15 @@ public class LogicManager {
 
     public Collection<User> getAllUsers() {
         return dataMgr.getAllUsers().values();
+    }
+
+    public List<String> getMoviePosters(){return dataMgr.getMoviePosters();}
+
+    public String randMoviePoster(){
+        int i = dataMgr.getMoviePosters().size();
+        Random generator = new Random();
+        int randomIndex = generator.nextInt(0, i);
+        return dataMgr.getMoviePosters().get(randomIndex);
     }
 
     // Gets all rated movies for one user and returns them sorted by avg. best by all users.
@@ -115,4 +128,6 @@ public class LogicManager {
             return null;
         }
     }
+
+
 }
