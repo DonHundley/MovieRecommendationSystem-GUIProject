@@ -12,7 +12,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("presentation/view/LogIn.fxml"));
-        primaryStage.setTitle("Movie Recommendation System 0.01 Beta");
+        primaryStage.setTitle("SeaFilm");
         primaryStage.getIcons().add(new Image("resources/login-icon.png"));
         // primaryStage.setFullScreen(true);
         primaryStage.setScene(new Scene(root));

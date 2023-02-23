@@ -18,6 +18,8 @@ import java.util.*;
 
 public class AppController implements Initializable {
     @FXML
+    private ImageView playTriangle;
+    @FXML
     private ImageView categoryOneMovieOne, categoryOneMovieTwo, categoryOneMovieThree, categoryOneMovieFour, categoryOneMovieFive;
     @FXML
     private ImageView categoryTwoMovieOne, categoryTwoMovieTwo, categoryTwoMovieThree, categoryTwoMovieFour, categoryTwoMovieFive;
@@ -123,6 +125,7 @@ public class AppController implements Initializable {
                 end = media.getDuration().toMillis();
 
                 playButton.setVisible(false);
+                playTriangle.setVisible(false);
 
                 if (current / end == 1) {
                     mediaPlayer.seek(Duration.seconds(0));
@@ -130,6 +133,7 @@ public class AppController implements Initializable {
                     playTimer.cancel();
                     running = false;
                     playButton.setVisible(true);
+                    playTriangle.setVisible(true);
                 }
             }
         };
