@@ -29,6 +29,12 @@ public class LogicManager {
         return dataMgr.getMoviePosters().get(randomIndex);
     }
 
+    public String getDescription(){
+        int i = dataMgr.getDescriptions().size();
+        Random generator = new Random();
+        int randomIndex = generator.nextInt(0, i);
+        return dataMgr.getDescriptions().get(randomIndex);
+    }
     // Gets all rated movies for one user and returns them sorted by avg. best by all users.
     public List<Movie> getTopAverageRatedMovies(User u) {
         List<Movie> top = new ArrayList<>();

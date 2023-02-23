@@ -17,18 +17,14 @@ import java.net.URL;
 import java.util.*;
 
 public class AppController implements Initializable {
-    public ImageView categoryOneMovieOne;
-    public ImageView categoryOneMovieTwo;
-    public ImageView categoryOneMovieThree;
-    public ImageView categoryOneMovieFour;
-    public ImageView categoryOneMovieFive;
-    public ImageView categoryTwoMovieOne;
-    public ImageView categoryTwoMovieTwo;
-    public ImageView categoryTwoMovieThree;
-    public ImageView categoryTwoMovieFour;
-    public ImageView categoryTwoMovieFive;
     @FXML
-    private Label movieTitleLabel;
+    private ImageView categoryOneMovieOne, categoryOneMovieTwo, categoryOneMovieThree, categoryOneMovieFour, categoryOneMovieFive;
+    @FXML
+    private ImageView categoryTwoMovieOne, categoryTwoMovieTwo, categoryTwoMovieThree, categoryTwoMovieFour, categoryTwoMovieFive;
+
+
+    @FXML
+    private Label movieTitleLabel, movieDescription;
     @FXML
     private Button playButton;
 
@@ -91,6 +87,7 @@ public class AppController implements Initializable {
 
         startTimer("Randomizing posters");
         movieTitleLabel.setText(model.randMovieTitle());
+        movieDescription.setText(model.randMovieDescription());
         setCategoryOnePosters();
         setCategoryTwoPosters();
         stopTimer();
@@ -157,6 +154,7 @@ public class AppController implements Initializable {
 
     public void getMovieInfo(MouseEvent mouseEvent) {
         movieTitleLabel.setText(model.randMovieTitle());
+        movieDescription.setText(model.randMovieDescription());
     }
 
     public void shiftMovies(MouseEvent mouseEvent) {

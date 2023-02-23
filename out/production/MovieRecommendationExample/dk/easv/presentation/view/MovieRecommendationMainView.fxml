@@ -78,7 +78,7 @@
                   </AnchorPane>
                   <AnchorPane style="-fx-background-color: #1D465F;">
                      <children>
-                        <Label layoutX="4.0" layoutY="38.0" prefHeight="204.0" prefWidth="300.0" stylesheets="@Style.css" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tortor est. Donec lacinia hendrerit ipsum quis lobortis. Maecenas pharetra iaculis lacus in accumsan. Aliquam lacinia ultrices neque. Quisque nec lectus euismod, pulvinar quam ac, pharetra nisl.  " textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="45.0">
+                        <Label fx:id="movieDescription" layoutX="4.0" layoutY="38.0" prefHeight="204.0" prefWidth="300.0" stylesheets="@Style.css" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae tortor est. Donec lacinia hendrerit ipsum quis lobortis. Maecenas pharetra iaculis lacus in accumsan. Aliquam lacinia ultrices neque. Quisque nec lectus euismod, pulvinar quam ac, pharetra nisl.  " textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="45.0">
                            <font>
                               <Font size="14.0" />
                            </font>

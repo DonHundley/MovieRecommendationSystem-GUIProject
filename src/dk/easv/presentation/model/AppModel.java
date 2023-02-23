@@ -90,6 +90,10 @@ public class AppModel {
         return null;
     }
 
+    public String randMovieDescription(){
+        return logic.getDescription();
+    }
+
     public String randMoviePosterPath(){
         return logic.randMoviePoster();
     }
