@@ -1,8 +1,6 @@
 package dk.easv.dataaccess;
 
-import dk.easv.entities.Movie;
-import dk.easv.entities.Rating;
-import dk.easv.entities.User;
+import dk.easv.entities.*;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -12,6 +10,7 @@ import java.util.*;
 public class DataAccessManager {
     private HashMap<Integer, User> users = new HashMap<>();
     private HashMap<Integer, Movie> movies = new HashMap<>();
+    private ArrayList<String> descriptions = new ArrayList<>();
     private List<Rating> ratings = new ArrayList<>();
 
 
@@ -34,7 +33,7 @@ public class DataAccessManager {
     public Map<Integer, Movie> getAllMovies() {
         return movies;
     }
-
+    public ArrayList<String> getDescriptions() {return descriptions;}
     public List<Rating> getAllRatings(){
         return ratings;
     }
@@ -43,6 +42,7 @@ public class DataAccessManager {
     public void updateCacheFromDisk(){
         loadAllRatings();
         loadAllPosters();
+        loadAllDescriptions();
     }
 
     private void loadAllPosters() {
@@ -60,6 +60,21 @@ public class DataAccessManager {
             }
         }
         moviePosters.addAll(posters);
+    }
+
+    private void loadAllDescriptions() {
+        try {
+            List<String> descriptionLines = Files.readAllLines(Path.of("data/descriptions.txt"));
+            Collection<String> descriptionsColl = new ArrayList<>();
+            for (String descriptionLine : descriptionLines) {
+                String[] split = descriptionLine.split("!");
+                Description description = new Description(Integer.parseInt(split[0]), split[1]);
+                descriptionsColl.add(description.getDescription());
+            }
+            descriptions.addAll(descriptionsColl);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
